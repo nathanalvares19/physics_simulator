@@ -17,7 +17,7 @@ double width = 50;
 double height = 50;
 
 // circle dimensions
-double radius = 10;
+double radius = 30;
 
 // max speed
 double max_speed = 200;

@@ -10,12 +10,12 @@ A simple implementation of a physics simulator in C++
 
 ---
 
-## Install raylib
+## Install the compiler and raylib
 
 Open **MSYS2 MinGW64** and run:
 
 ```bash
-pacman -S mingw-w64-x86_64-raylib
+pacman -S --needed mingw-w64-x86_64-gcc mingw-w64-x86_64-raylib
 ```
 
 Verify:
@@ -25,6 +25,28 @@ ls /mingw64/include/raylib.h
 ```
 
 ---
+
+## Compile and run
+
+In **MSYS2 MinGW64**, change to the project directory (replace the path if needed):
+
+```bash
+cd /c/Users/natha/ip/etc/physics_sim
+```
+
+Compile from the project root:
+
+```bash
+g++ -std=c++17 -I include main.cpp src/window.cpp src/body.cpp src/globals.cpp src/vector2.cpp src/scene.cpp src/state_utils.cpp -o main.exe -lraylib
+```
+
+This includes the headers in `include/`, compiles all current source files, and links raylib to create `main.exe`.
+
+Run the simulator from the same shell:
+
+```bash
+./main.exe
+```
 
 ---
 
